@@ -15,48 +15,88 @@ public class TekrarEden {
 				
 				if (arr[i]==arr[j])
 				{
-					//System.out.println(arr[i]);
+					System.out.println(arr[i]);
 				}
 				
 			}
 			
 		}
 		
-		int [] aray = {3,7,12,3,43,54,43,28,3,19,-24,-19,43};
-		
-		for (int i = 0; i < aray.length; i++) 
-		{
-			
-			for (int j = 0; j < aray.length; j++)
-			{
-				
-				if(aray[i] == aray[j]) 
-				{
-					
-					System.out.println(aray[i]);
-					
-				}
-				
-				else 
-				{
-					
-					double[] data;
-					
-					data = new double[aray.length];
-					
-					//data[i] 
-					
-				}
-					
-				
-			}
-			
-		}
-		
-		
-		
+//		int [] aray = {3,7,12,3,43,54,43,28,3,19,-24,-19,43};
+//		
+//		for (int i = 0; i < aray.length; i++) 
+//		{
+//			
+//			for (int j = 0; j < aray.length; j++)
+//			{
+//				
+//				if(aray[i] == aray[j]) 
+//				{
+//					
+//					System.out.println(aray[i]);
+//					
+//				}
+//				
+//				else 
+//				{
+//					
+//					double[] data;
+//					
+//					data = new double[aray.length];
+//					
+//					//data[i] 
+//					
+//					
+//				}
+//					
+//				
+//			}
+//			
+//		}
 		
 		
+		
+		
+		int A[] = {1,2,2,2,2,3,4,5,5,5,6,6,8,8};
+
+        int count=0;
+
+    //    Arrays.sort(A); // Dizideki elemanları küçükten büyüğe sırala
+
+        for(int i=0; i<A.length; i++)
+        {
+            count=0;
+            for (int j=0; j<A.length; j++)
+            {
+                if(A[i]==A[j])
+                {
+                    count++;
+
+                }
+            }
+
+            if(i==0 && A[i+1]==A[i])
+            {
+System.out.println(String.format("%d 'den %d tane var.", A[i], count));
+            }
+
+            if(i==0 && A[i+1]!=A[i])
+            {
+System.out.println(String.format("%d 'den %d tane var.", A[i], count));
+            }
+
+
+/* dizideki elemanlar küçükten 
+büyüğe sıralandığından kendinden
+ bir önceki eleman ya aynıdır ya 
+farklıdır eğer aynı ise bu elemanı tekrar sayma.*/
+
+            if(i!=0 && A[i-1]!=A[i]) 
+            {
+System.out.println(String.format("%d 'den %d tane var.", A[i], count));
+            }
+
+        }
 		
 		
 	}
